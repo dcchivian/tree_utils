@@ -233,7 +233,7 @@ def write_tree_img_to_files (t,
     ts.show_branch_length = False
     ts.show_branch_support = False  # trimming killed support vals
     #ts.scale = 50 # 50 pixels per branch length unit
-    ts.optimal_scale_level = 'full'
+    #ts.optimal_scale_level = 'full'  # not working right.  supposed to remove dots
     ts.branch_vertical_margin = 5  # pixels btw adjacent branches, may conflict with scale
     #title_disp = intree_name
     if title_disp is None:

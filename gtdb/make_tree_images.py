@@ -225,6 +225,7 @@ def write_tree_img_to_files (t,
                              all_leaf_lineages):
     out_files = dict()
 
+    # set style
     t.ladderize()
     ts = ete3.TreeStyle()
 
@@ -232,7 +233,9 @@ def write_tree_img_to_files (t,
     ts.show_leaf_name = True
     ts.show_branch_length = False
     ts.show_branch_support = False  # trimming killed support vals
-                                 
+
+    # adjust tree size for circle
+    n_leaves = len(t.get_leaf_names())                        
     ts.branch_vertical_margin = 5  # pixels btw adjacent branches
     ts.optimal_scale_level = 'mid'  # 'full' makes all dots.  bad.                                 
     min_scale = 100

@@ -203,7 +203,7 @@ def get_all_taxon_colors (t, all_leaf_lineages, out_file=None):
         #]
     ]
 
-    tax_levels_supported = [ 'p', 'c', 'o', 'f', 'g']  # skipping domain and species
+    tax_levels_supported = [ 'p', 'c', 'o', 'f', 'g', 's']  # skipping domain
     
     # get tax hierarchies we care about from tree
     tax_lineages = dict()
